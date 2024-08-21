@@ -1,23 +1,8 @@
 body {
     background-image: url('/wallhaven-m3eyyk.jpg');
-    background-size: 300% 300%;
-}
-@keyframes hhh {
-    0% {
-        background-position: 300% 300%;
-    }
-
-    33% {
-        background-position: 200% 200%;
-    }
-
-    66% {
-        background-position: 100% 100%;
-    }
-
-    100% {
-        background-position: 0% 0%;
-    }
+    background-size: cover, 300% 300%;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .hello{
     position: absolute;
