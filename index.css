@@ -193,12 +193,13 @@ a:hover {
     padding-left: 25px;
 }
 
-@media screen and (max-width: 768px) {
-   html, body {
+@media screen and (max-width: 480px) {
+.inbutton {
+        font-size: 1
+html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* 防止横向滚动 */
 }
 
 body {
@@ -208,98 +209,184 @@ body {
     background-position: center;
 }
 
-/* 主容器 */
 .hello {
     position: absolute;
-    width: 90%; /* 使用百分比，使其适应不同屏幕 */
-    max-width: 500px; /* 设置最大宽度，防止在大屏幕上过宽 */
-    height: auto; /* 高度自动适应内容 */
-    background-color: rgba(255, 228, 196, 0.7);
+    width: 80%;  /* 宽度改为百分比，适应不同屏幕 */
+    max-width: 500px;
+    height: auto;
+    max-height: 300px;
+    background-color: rgba(255,228,196,0.7);
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); /* 居中 */
     border-radius: 20px;
-    padding: 20px; /* 为内容添加内边距 */
-    box-sizing: border-box;
+    padding: 20px;
 }
 
-/* 作者信息的容器 */
 .author {
     box-sizing: border-box;
-    position: relative; /* 改为相对定位，更适合响应式布局 */
-    top: 0;
-    height: auto;
-    width: 100%; /* 宽度设置为100% */
+    position: fixed;
+    top: 100px;
+    height: 60px;
+    width: 90%;
+    max-width: 230px;
     background-color: orange;
-    padding: 10px;
+    margin-left: -50%;
+    padding-top: 17px;
     border-radius: 10px;
-    text-align: center; /* 内容居中 */
-    margin-bottom: 20px; /* 底部添加间距 */
 }
 
 .newpage {
+    padding-left: 13px;
     text-decoration: none;
-    font-size: 1.2rem;
-}
-
-a:hover {
-    color: black;
-}
-
-/* 按钮区域 */
-.button {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px 0;
-}
-
-.inbutton {
-    flex: 1;
-    margin: 0 10px; /* 按钮之间添加间距 */
-    height: 50px; /* 固定高度 */
-    border: 0;
-    border-radius: 10px;
-    font-size: 1.5rem;
-    color: rgba(0, 0, 0, 0.7);
-    cursor: pointer;
-}
-
-.left {
-    background-color: rgb(250, 143, 113);
-}
-
-.left:hover {
-    background-color: rgba(250, 143, 113, 0.7);
-}
-
-.right {
-    background-color: rgb(129, 214, 207);
-}
-
-.right:hover {
-    background-color: rgba(129, 214, 207, 0.7);
-}
-
-.makenot {
-    width: 100%; /* 宽度设置为100% */
-    height: 50px;
-    margin: 20px 0;
-    border: 0;
-    border-radius: 10px;
-    font-size: 1.5rem;
-    color: rgba(0, 0, 0, 0.7);
-    background-color: rgb(248, 232, 174);
-    cursor: pointer;
-}
-
-/* 单词展示 */
-.word {
-    font-size: 2rem; /* 调整字体大小以适应屏幕 */
+    font-size: 16px;
+    display: block;
     text-align: center;
 }
 
-/* 右上角固定按钮 */
-.github-corner {
-    width: 50px;
-    height: 50px;
+.button {
+    position: fixed;
+    width: 90%;
+    max-width: 500px;
+    height: 80px;
+    top: 330px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.inbutton {
+    width: 45%;
+    max-width: 200px;
+    height: 80px;
+    border: 0;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    color: rgba(0,0,0,0.7);
+    cursor: pointer;
+    margin: 5px;
+}
+
+.makenot {
+    position: fixed;
+    width: 90%;
+    max-width: 500px;
+    height: 80px;
+    top: 450px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 0;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    color: rgba(0, 0, 0, 0.7);
+    background-color: rgb(248,232,174);
+    cursor: pointer;
+}
+
+.word {
+    font-size: 40px; /* 减小字体尺寸，适应移动端 */
+    text-align: center;
+}
+
+.notlist {
+    position: fixed;
+    width: 80%;
+    max-width: 250px;
+    height: 50%;
+    max-height: 600px;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px; 
+    padding: 10px;
+    background-color: rgba(255, 228, 196, 0.7);
+    overflow-y: scroll;
+}
+
+.now {
+    position: fixed;
+    width: 80%;
+    max-width: 450px;
+    height: auto;
+    max-height: 100px;
+    top: 230px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    background-color: rgb(254,167,141);
+}
+
+.nownum {
+    padding-left: 13px;
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.x {
+    width: 40px;
+    height: 20px;
+    border: 0;
+    border-radius: 5px;
+    background-color: rgb(230,206,230);
+    cursor: pointer;
+}
+
+.change {
+    width: 70px;
+    height: 50px; 
+    border-radius: 10px;
+    cursor: pointer;
+    box-sizing: border-box;
+    padding-left: 23px;
+    padding-top: 12px;
+    color: snow;
+}
+
+.junior {
+    position: fixed;
+    top: 420px;
+    left: 10%;
+    background-color: #de283b;
+}
+
+.senior {
+    position: fixed;
+    top: 420px;
+    left: 90px;
+    background-color: #ff6366;
+}
+
+.cet4 {
+    position: fixed;
+    top: 420px;
+    left: 170px;
+    background-color: #FFD700;
+}
+
+.cet6 {
+    position: fixed;
+    top: 420px;
+    left: 250px;
+    background-color: #00E5FF;
+}
+
+.postgraduate {
+    position: fixed;
+    top: 500px;
+    left: 10%;
+    background-color: #c69fff;
+}
+
+.toefl {
+    position: fixed;
+    top: 500px;
+    left: 90px;
+    background-color: #ff8e8c;
+}
+
+.sat {
+    position: fixed;
+    top: 500px;
+    left: 170px;
+    background-color: #86efac;
+    padding-left: 25px;
 }
