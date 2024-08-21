@@ -194,26 +194,112 @@ a:hover {
 }
 
 @media screen and (max-width: 768px) {
-    .word {
-        font-size: 30px; /* 更小的字体 */
-    }
-    .inbutton {
-        width: 90%; /* 按钮宽度调整为占据整个屏幕 */
-        margin: 10px auto;
-    }
-    .makenot {
-        width: 90%; /* 调整宽度 */
-        top: 500px; /* 调整位置 */
-    }
-    .hello {
-        width: 90%; /* 宽度调整为屏幕的90% */
-    }
-    .notlist {
-        width: 90%;
-        max-height: 300px; /* 限制高度，防止溢出 */
-    }
-    .now {
-        width: 90%;
-        top: 260px;
-    }
+   html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* 防止横向滚动 */
+}
+
+body {
+    background-image: url('/wallhaven-m3eyyk.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* 主容器 */
+.hello {
+    position: absolute;
+    width: 90%; /* 使用百分比，使其适应不同屏幕 */
+    max-width: 500px; /* 设置最大宽度，防止在大屏幕上过宽 */
+    height: auto; /* 高度自动适应内容 */
+    background-color: rgba(255, 228, 196, 0.7);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    padding: 20px; /* 为内容添加内边距 */
+    box-sizing: border-box;
+}
+
+/* 作者信息的容器 */
+.author {
+    box-sizing: border-box;
+    position: relative; /* 改为相对定位，更适合响应式布局 */
+    top: 0;
+    height: auto;
+    width: 100%; /* 宽度设置为100% */
+    background-color: orange;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center; /* 内容居中 */
+    margin-bottom: 20px; /* 底部添加间距 */
+}
+
+.newpage {
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+a:hover {
+    color: black;
+}
+
+/* 按钮区域 */
+.button {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.inbutton {
+    flex: 1;
+    margin: 0 10px; /* 按钮之间添加间距 */
+    height: 50px; /* 固定高度 */
+    border: 0;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    color: rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+}
+
+.left {
+    background-color: rgb(250, 143, 113);
+}
+
+.left:hover {
+    background-color: rgba(250, 143, 113, 0.7);
+}
+
+.right {
+    background-color: rgb(129, 214, 207);
+}
+
+.right:hover {
+    background-color: rgba(129, 214, 207, 0.7);
+}
+
+.makenot {
+    width: 100%; /* 宽度设置为100% */
+    height: 50px;
+    margin: 20px 0;
+    border: 0;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    color: rgba(0, 0, 0, 0.7);
+    background-color: rgb(248, 232, 174);
+    cursor: pointer;
+}
+
+/* 单词展示 */
+.word {
+    font-size: 2rem; /* 调整字体大小以适应屏幕 */
+    text-align: center;
+}
+
+/* 右上角固定按钮 */
+.github-corner {
+    width: 50px;
+    height: 50px;
 }
