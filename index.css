@@ -237,7 +237,7 @@ a:hover {
 }
 
 /* CSS for mobile devices */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     /* html, body 结构不变 */
     
     /* 主容器 */
@@ -365,7 +365,7 @@ a:hover {
     height: 50px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     /* 当屏幕宽度小于768px时执行 */
     .hello {
         width: 95%; /* 减小宽度 */
@@ -613,7 +613,7 @@ body {
 }
 
 /* 添加响应式设计 */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
     .word {
         font-size: 30px; /* 更小的字体 */
     }
