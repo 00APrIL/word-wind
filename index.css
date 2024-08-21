@@ -193,7 +193,6 @@ a:hover {
     padding-left: 25px;
 }
 
-
 @media (max-width: 480px) {
 /* 全局样式 */
 html, body {
@@ -289,24 +288,29 @@ body {
     text-align: center;
 }
 
+/* 移动端样式（480px以下设备） */
+@media (max-width: 480px) {
+    /* 主容器布局调整 */
     .hello {
         width: 90%;
-        padding: 20px;
-        top: 10%;
+        padding: 15px;
+        top: 5%;
         left: 50%;
-        transform: translate(-50%, -10%);
+        transform: translate(-50%, -5%);
     }
 
     .author {
-        top: 20px;
+        top: 10px;
         left: 50%;
         width: 80%;
         height: auto;
+        padding: 10px;
         transform: translateX(-50%);
         text-align: center;
+        font-size: 1rem;
     }
 
-    /* 调整按钮布局与大小 */
+    /* 按钮布局与大小调整 */
     .button, .makenot {
         width: 90%;
         height: auto;
@@ -316,47 +320,50 @@ body {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin: 10px 0;
+        margin: 8px 0;
     }
 
     .inbutton {
-        width: 90%;
-        height: 50px;
-        font-size: 1.2rem;
-        margin: 10px 0;
+        width: 100%;
+        height: 40px;
+        font-size: 1rem;
+        margin: 5px 0;
     }
 
-    /* 重新设计的“不会”按钮 */
     .makenot {
-        width: 90%;
-        height: 50px;
-        margin-top: 20px;
+        width: 100%;
+        height: 40px;
+        font-size: 1rem;
+        margin-top: 15px;
     }
 
-    /* 调整笔记列表布局 */
+    /* 笔记列表布局 */
     .notlist {
         width: 90%;
-        height: 150px;
-        top: 75%;
+        height: 120px;
+        top: 70%;
         left: 50%;
         transform: translateX(-50%);
         overflow-y: auto;
+        font-size: 0.8rem;
     }
 
-    /* 调整当前状态显示 */
+    /* 当前状态显示调整 */
     .now {
         width: 90%;
-        height: 60px;
-        top: 50%;
+        height: 50px;
+        top: 35%;
         left: 50%;
         transform: translateX(-50%);
+        font-size: 0.9rem;
     }
 
-    /* 调整变更按钮的布局与大小 */
+    /* 变更按钮的布局与大小 */
     .change {
-        width: 90%;
-        height: 40px;
-        margin: 10px auto;
+        width: 100%;
+        height: 35px;
+        margin: 8px auto;
+        font-size: 0.9rem;
         text-align: center;
     }
 }
