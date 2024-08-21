@@ -194,12 +194,13 @@ a:hover {
 }
 
 @media screen and (max-width: 480px) {
-.inbutton {
-        font-size: 1
+/* 全局样式：为所有设备设定的基础样式 */
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
 }
 
 body {
@@ -209,184 +210,148 @@ body {
     background-position: center;
 }
 
+/* 桌面端样式（默认样式） */
 .hello {
     position: absolute;
-    width: 80%;  /* 宽度改为百分比，适应不同屏幕 */
-    max-width: 500px;
-    height: auto;
-    max-height: 300px;
+    width: 500px;
+    height: 300px;
     background-color: rgba(255,228,196,0.7);
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* 居中 */
+    transform: translate(-50%, -50%);
     border-radius: 20px;
-    padding: 20px;
 }
 
 .author {
-    box-sizing: border-box;
     position: fixed;
     top: 100px;
+    left: 50px;
+    width: 230px;
     height: 60px;
-    width: 90%;
-    max-width: 230px;
     background-color: orange;
-    margin-left: -50%;
-    padding-top: 17px;
+    padding: 17px;
     border-radius: 10px;
 }
 
-.newpage {
-    padding-left: 13px;
-    text-decoration: none;
-    font-size: 16px;
-    display: block;
-    text-align: center;
+.button, .makenot {
+    position: fixed;
+    width: 500px;
+    height: 100px;
 }
 
 .button {
-    position: fixed;
-    width: 90%;
-    max-width: 500px;
-    height: 80px;
     top: 330px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.inbutton {
-    width: 45%;
-    max-width: 200px;
-    height: 80px;
-    border: 0;
-    border-radius: 10px;
-    font-size: 1.5rem;
-    color: rgba(0,0,0,0.7);
-    cursor: pointer;
-    margin: 5px;
 }
 
 .makenot {
-    position: fixed;
-    width: 90%;
-    max-width: 500px;
-    height: 80px;
     top: 450px;
-    left: 50%;
-    transform: translateX(-50%);
-    border: 0;
-    border-radius: 10px;
-    font-size: 1.5rem;
-    color: rgba(0, 0, 0, 0.7);
-    background-color: rgb(248,232,174);
-    cursor: pointer;
 }
 
-.word {
-    font-size: 40px; /* 减小字体尺寸，适应移动端 */
-    text-align: center;
+.inbutton {
+    width: 200px;
+    height: 80px;
+    border-radius: 10px;
+    font-size: 2rem;
+    cursor: pointer;
 }
 
 .notlist {
     position: fixed;
-    width: 80%;
-    max-width: 250px;
-    height: 50%;
-    max-height: 600px;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 10px; 
-    padding: 10px;
+    width: 250px;
+    height: 600px;
+    top: 10px;
+    left: 670px;
+    border-radius: 10px;
     background-color: rgba(255, 228, 196, 0.7);
     overflow-y: scroll;
+    padding: 10px;
 }
 
 .now {
     position: fixed;
-    width: 80%;
-    max-width: 450px;
-    height: auto;
-    max-height: 100px;
+    width: 450px;
+    height: 100px;
     top: 230px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 20px;
     border-radius: 10px;
     background-color: rgb(254,167,141);
 }
 
-.nownum {
-    padding-left: 13px;
-    font-size: 25px;
-    font-weight: 300;
-}
-
-.x {
-    width: 40px;
-    height: 20px;
-    border: 0;
-    border-radius: 5px;
-    background-color: rgb(230,206,230);
-    cursor: pointer;
-}
-
 .change {
-    width: 70px;
-    height: 50px; 
+    width: 100px;
+    height: 50px;
+    margin: 5px;
     border-radius: 10px;
     cursor: pointer;
-    box-sizing: border-box;
-    padding-left: 23px;
-    padding-top: 12px;
     color: snow;
+    padding: 12px;
+    text-align: center;
 }
 
-.junior {
-    position: fixed;
-    top: 420px;
-    left: 10%;
-    background-color: #de283b;
-}
+/* 移动端样式 */
+@media (max-width: 768px) {
+    .hello {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -20%);
+    }
 
-.senior {
-    position: fixed;
-    top: 420px;
-    left: 90px;
-    background-color: #ff6366;
-}
+    .author {
+        top: 20px;
+        left: 50%;
+        width: 80%;
+        height: auto;
+        transform: translateX(-50%);
+        text-align: center;
+    }
 
-.cet4 {
-    position: fixed;
-    top: 420px;
-    left: 170px;
-    background-color: #FFD700;
-}
+    .button {
+        width: 90%;
+        height: auto;
+        top: 60%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: space-between;
+    }
 
-.cet6 {
-    position: fixed;
-    top: 420px;
-    left: 250px;
-    background-color: #00E5FF;
-}
+    .inbutton {
+        width: 48%;
+        height: 60px;
+        font-size: 1.5rem;
+    }
 
-.postgraduate {
-    position: fixed;
-    top: 500px;
-    left: 10%;
-    background-color: #c69fff;
-}
+    .makenot {
+        width: 90%;
+        height: 60px;
+        top: 75%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 
-.toefl {
-    position: fixed;
-    top: 500px;
-    left: 90px;
-    background-color: #ff8e8c;
-}
+    .notlist {
+        width: 90%;
+        height: 200px;
+        top: 85%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 
-.sat {
-    position: fixed;
-    top: 500px;
-    left: 170px;
-    background-color: #86efac;
-    padding-left: 25px;
+    .now {
+        width: 90%;
+        height: 80px;
+        top: 45%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .change {
+        width: 90%;
+        height: 40px;
+        margin: 10px auto;
+        text-align: center;
+    }
 }
