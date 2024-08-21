@@ -193,8 +193,102 @@ a:hover {
     padding-left: 25px;
 }
 
+
 @media (max-width: 480px) {
-    /* 主容器布局调整 */
+/* 全局样式 */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('/wallhaven-m3eyyk.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* 桌面端样式（默认样式） */
+.hello {
+    position: absolute;
+    width: 500px;
+    height: 300px;
+    background-color: rgba(255,228,196,0.7);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+}
+
+.author {
+    position: fixed;
+    top: 100px;
+    left: 50px;
+    width: 230px;
+    height: 60px;
+    background-color: orange;
+    padding: 17px;
+    border-radius: 10px;
+}
+
+.button, .makenot {
+    position: fixed;
+    width: 500px;
+    height: 100px;
+}
+
+.button {
+    top: 330px;
+}
+
+.makenot {
+    top: 450px;
+}
+
+.inbutton {
+    width: 200px;
+    height: 80px;
+    border-radius: 10px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.notlist {
+    position: fixed;
+    width: 250px;
+    height: 600px;
+    top: 10px;
+    left: 670px;
+    border-radius: 10px;
+    background-color: rgba(255, 228, 196, 0.7);
+    overflow-y: scroll;
+    padding: 10px;
+}
+
+.now {
+    position: fixed;
+    width: 450px;
+    height: 100px;
+    top: 230px;
+    left: 20px;
+    border-radius: 10px;
+    background-color: rgb(254,167,141);
+}
+
+.change {
+    width: 100px;
+    height: 50px;
+    margin: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: snow;
+    padding: 12px;
+    text-align: center;
+}
+
     .hello {
         width: 90%;
         padding: 20px;
