@@ -1,4 +1,4 @@
-@media (min-width: 800px) {
+@media (min-width: 768px) {
 html, body {
     height: 100%;
     margin: 0;
@@ -194,7 +194,7 @@ a:hover {
     padding-left: 25px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
 html, body {
     height: 100%;
     margin: 0;
