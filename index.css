@@ -193,7 +193,7 @@ a:hover {
     padding-left: 25px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
 html, body {
     height: 100%;
     margin: 0;
